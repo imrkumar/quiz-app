@@ -39,12 +39,30 @@
     text-align: center;
     margin-top: 42px;
 }
-.header-button button {
+.header-button button{
+    
     padding: 20px;
     background-color: red;
-    color: white;
+   
     text-align: center;
     border: 2px solid red;
     border-radius: 40px;
     font-size: 28px;
+}
+.header-button button a{
+    text-decoration: none; 
+    color: white;
+}
+.category-main-container{
+    margin-top: 25px;
+}
+.category-main-container h1{
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+}
+.cat1 img{
+  
+    height: 300px;
+    width: 400px;
 }
