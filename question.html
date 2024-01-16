@@ -40,15 +40,15 @@
             <h2 class="mb-4">Admin</h2>
             <dl>
                 
-                <dt><label class="form-label" >Question</label></dt>
-                <dd><textarea></textarea></dd>
-                <dt><label class="form-label" >options</label></dt>
-                <dd><input type="text" class="form-control"  required></dd>
-                <dd><input type="text" class="form-control"  required></dd>
-                <dd><input type="text" class="form-control"  required></dd>
-                <dd><input type="text" class="form-control"  required></dd>
-                <dt><label class="form-label" >Answer</label></dt>
-                <dd><input type="text" class="form-control"  required></dd>
+                <dt><label class="form-label" for="question" >Question</label></dt>
+                <dd><textarea id="question" name="question"></textarea></dd>
+                <dt><label class="form-label" for="options">options</label></dt>
+                <dd><input type="text" class="form-control"  required id="optionA" name="options"></dd>
+                <dd><input type="text" class="form-control"  required id="optionB" name="options"></dd>
+                <dd><input type="text" class="form-control"  required id="optionC" name="options"></dd>
+                <dd><input type="text" class="form-control"  required id="optionD" name="options"></dd>
+                <dt><label class="form-label" for="answer">Answer</label></dt>
+                <dd><input type="text" class="form-control" id="answer" required name="answer"></dd>
             </dl>
             <div class="text-center mt-4"><button class="btn btn bg-success  text-white ">Submit</button>
                 <button class="btn btn-danger ">Cancel</button>
@@ -56,5 +56,9 @@
         </form>
 
     </div>
+    <script>
+       
+    </script>
+
 </body>
 </html>

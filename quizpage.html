@@ -60,6 +60,7 @@
         .questionName p {
             font-size: 25px;
             padding: 0px 20px;
+            text-align: center;
         }
 
         .option-container {
@@ -76,13 +77,19 @@
             background-color: black;
         }
 
-        .row1 span {
-            margin-left: 145px;
+        .row1 {
+          margin-left:193px;
         }
 
-        .row2 span {
-            margin-left: 145px;
+        .row2 {
+            margin-left:193px;
             line-height: 3;
+        }
+        .col1{
+            margin-left:110px;
+        }
+        .col2{
+            margin-left:110px;
         }
         .btn {
     text-align: center;
@@ -110,32 +117,35 @@
             </div>
             <div class="questionName">
                 <h2>Quiz About Buildings</h2>
-                <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequatur nesciunt aperiam dolorum
+                <p id="question">1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequatur nesciunt aperiam dolorum
                     sunt temporibus debitis id necessitatibus, autem, reiciendis saepe odio facilis possimus!
                 </p>
             </div>
             <div class="option-container">
-                <div class="row1">
-                    <span>
+                <div >
+                    <span class="row1">
                         <input type="radio" name="option">
-                        M and Ms
+                       <span id="optionA"> M and Ms</span>
                     </span>
-                    <span>
+                    <span class="col1">
                         <input type="radio" name="option">
 
-                        M and Ms
+                       <span id="optionB"> M and Ms</span>
+                       
                     </span>
                 </div>
-                <div class="row2">
-                    <span>
+                <div >
+                    <span class="row2">
                         <input type="radio" name="option">
 
-                        M and Ms
+                        <span id="optionC"> M and Ms</span>
+
                     </span>
-                    <span>
+                    <span class="col2">
                         <input type="radio" name="option">
 
-                        M and Ms
+                        <span id="optionD"> M and Ms</span>
+
                     </span>
                 </div>
             </div>
@@ -145,6 +155,31 @@
         </div>
        
     </div>
+    <script>
+       function loadDepartment(){
+      fetch("http://localhost:9090/getQuiz",{
+        method:"GET",
+
+      }).then((response)=>{
+        
+         return response.json()
+      }).then((data)=>{
+       
+        for(item of data){
+            document.getElementById("question").innerHTML=item.question
+            for(option of item.options){
+                document.getElementById("optionA").innerHTML=item.options[0]
+                document.getElementById("optionB").innerHTML=item.options[1]
+                document.getElementById("optionC").innerHTML=item.options[2]
+                document.getElementById("optionD").innerHTML=item.options[3]
+            }
+
+
+            	
+        }
+    })}
+    loadDepartment()
+    </script>
 </body>
 
 </html>
