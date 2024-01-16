@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-main-container{
+    height: 545px;
+    background-color:#ceefff;
+}
+.header{
+   
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.head-data {
+    width: 24%;
+    padding-top: 76px;
+}
+.head-data h1 {
+    width: 145%;
+    font-size: 51px;
+}
+.head-data p {
+    line-height: 3;
+    font-size: 24px;
+}
+.head-data span{
+    margin-left: 3px;
+}
+.head-img{
+    margin-top: 46px;
+}
+.head-img img{
+    height: 340px;
+}
+.header-button {
+    text-align: center;
+    margin-top: 42px;
+}
+.header-button button {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 40px;
+    font-size: 28px;
+}
